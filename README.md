@@ -9,6 +9,37 @@ Copulas are a model for specifying
 the joint probability p(x1, x2, ..., xn) given a correlation structure along
 with specifications for the marginal distribution of each feature. The current implementation uses a multivariate normal distribution with specified covariance matrix.  Future work can expand this choice to other multivariate distributions. 
 
+<<<<<<< HEAD
+=======
+### Features:
+Inputs:
+- [x] specify the marginal distribution of a column  
+- [x] correlation (correlated but not dependent)
+- [x] prescaled inputs using MinMaxScaler (TODO:  add StdScaler, etc.)
+- [ ] nuisance variables - carry no signal, set the lower limit on 'acceptable' feature importance
+- [ ] redundant (correlated and dependent - say by a linear combo of informative features)
+
+- [ ] separation between classes (can we filter +/- k% on either side of p_thresh to create separation?)
+- [ ] overlap - since we have ground truth probabilities, we could sample from a binomial distribution with probability of (py|x) to determine labels - this would work in conjuction with sig_k which controls the steepness of the sigmoid  
+- [ ] noise level - apply *after* we generate regression values/labels 
+  - [x] gaussian white on X
+  - [ ] percentage shuffled  (see e.g. `flip_y` in `make_classification`)
+- [x] categorical features (stretch)
+- [ ] outlier generation (stretch, *new*)
+- [ ] create fake PII with [pydbgen](https://github.com/tirthajyoti/pydbgen)  (stretch, *new*)
+
+
+Output:
+- [ ] functional dependence y_reg = f(x) where y_reg is a float - implemented via an expression as a string
+- [ ] mapping from y_reg value to y_class 
+    - [ ] partition and label - e.g. `y_class = y_reg < np.median(y_reg)`
+    - [x] sigmoid
+    - [ ] Gompertz curve (a parameterized sigmoid - would give control over uncertainty?
+    - these last two provide ground truth P(y|x) (regression -> probability -> label)
+  -[ ] noise (e.g. `flip_y`)
+  -[ ] map class to probability using random draw from binomial distribution
+
+>>>>>>> b75f94d (cleaned up comments and removed sympy from req)
 ### Parameters  
 | name          | type       | default        | description                                                                                                                      |
 | ------------- | ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -18,7 +49,7 @@ with specifications for the marginal distribution of each feature. The current i
 | n_clases      | int        | (default=2)    | the number of classes                                                                                                            |
 | dist          | list       |                | a list of the marginal distributions to apply to the features/columns                                                            |
 | cov           | matrix     |                | a square numpy array with dimensions (??? x ???) - should be n_total where n_total=n_informative + n_nuisance                    |
-| expr          | sympy expr |                | an expression providing y = f(X)                                                                                                 |
+| expr          | str |                | an expression providing y = f(X)                                                                                                 |
 | sig_k         | float      | (default=1.0)  | the steepness of the sigmoid used in mapping y_reg to y_prob                                                                     |
 | sig_x0        | float      | (default=None) | the center point of the sigmoid used in mappying y_reg to y_prob                                                                 |
 | p_thresh      | float      | (default=0.5)  | threshold probability that determines boundary between classes                                                                   |
