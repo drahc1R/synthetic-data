@@ -5,5 +5,9 @@ scipy
 =======
 scikit-learn==1.0.2
 scipy==1.8.0
+<<<<<<< HEAD
 dataprofiler==0.7.9
 >>>>>>> 8dae898 (Detect Marginal Distributions of columns from DataProfiler report (#260))
+=======
+dataprofiler==0.7.10
+>>>>>>> a295401 (Synthetic Graph Data Generator (#267))
