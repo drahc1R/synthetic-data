@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 flake8
 pandas
 pytest
 pytest-cov
+=======
+pytest
+pytest-cov
+matplotlib
+flake8
+pandas
+>>>>>>> 1550e82 (fix: add test-req)
