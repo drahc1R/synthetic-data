@@ -73,6 +73,7 @@ pip install -e .
 ```
 
 ### Tests
+<<<<<<< HEAD
 To run tests:
 ```bash
 <<<<<<< HEAD
@@ -81,6 +82,18 @@ $ python -m pytest tests/
 $ pip install -r requirements-test.txt
 $ make test_local
 >>>>>>> 8533f8d (reformatted the continuous attributes dictionary, fixed tests)
+=======
+
+Test/Lint Dependencies
+
+```bash
+pip install -r requirements-test.txt
+```
+
+To run tests:
+```bash
+make test_local
+>>>>>>> 4850707 (removed unused imports)
 ```
 
 ### Referencing this library
