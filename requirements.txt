@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 numpy>=1.22.0rc1
 <<<<<<< HEAD
 scikit-learn
@@ -15,3 +16,9 @@ dataprofiler==0.7.10
 =======
 dataprofiler==0.8.0
 >>>>>>> 3c126d0 (bumping version of DP)
+=======
+numpy>=1.22
+scikit-learn>=1.1.0
+scipy==1.8.0
+dataprofiler>=0.8.8
+>>>>>>> a583310 (updated pkg versions for vulns)
