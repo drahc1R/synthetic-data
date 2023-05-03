@@ -27,8 +27,13 @@ with open('README.md', 'r') as readme:
     long_description = readme.read()
 
 setup(
+<<<<<<< HEAD
     name='make_tabular_data',
     version='0.0.1',
+=======
+    name='synthetic-data',
+    version='1.2.0',
+>>>>>>> ad44e9d (feat: iterate version (#286))
     maintainer='Brian Barr',
     maintainer_email='brian.barr@capitalone.com',
     license='Apache License 2.0',
