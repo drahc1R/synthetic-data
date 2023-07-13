@@ -9,4 +9,8 @@ pytest-cov
 matplotlib
 flake8
 pandas
+<<<<<<< HEAD
 >>>>>>> 1550e82 (fix: add test-req)
+=======
+pre-commit
+>>>>>>> 35db073 (pre-commit BLACK (#297))

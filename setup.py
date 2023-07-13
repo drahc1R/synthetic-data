@@ -20,13 +20,14 @@ from setuptools import setup, find_packages
 def parse_requirements(filename):
     """Loads requirements file and outputs an array of dependencies"""
     lineiter = (line.strip() for line in open(filename))
-    return [line for line in lineiter if line and not line.startswith('#')]
+    return [line for line in lineiter if line and not line.startswith("#")]
 
 
-with open('README.md', 'r') as readme:
+with open("README.md", "r") as readme:
     long_description = readme.read()
 
 setup(
+<<<<<<< HEAD
 <<<<<<< HEAD
     name='make_tabular_data',
     version='0.0.1',
@@ -44,7 +45,20 @@ setup(
     install_requires=parse_requirements('requirements.txt'),
     # test_requires=None,
     url=None,
+=======
+    name="synthetic-data",
+    version="1.2.0",
+    maintainer="Brian Barr",
+    maintainer_email="brian.barr@capitalone.com",
+    license="Apache License 2.0",
+    description="Generates complex, nonlinear datasets for use \
+        with deep learning/black box models",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    install_requires=parse_requirements("requirements.txt"),
+    url="https://github.com/capitalone/synthetic-data",
+>>>>>>> 35db073 (pre-commit BLACK (#297))
     packages=find_packages(),
     include_package_data=True,
-    python_requires=">=3.8"
+    python_requires=">=3.8",
 )
