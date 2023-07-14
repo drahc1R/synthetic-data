@@ -12,7 +12,7 @@ Ideally, the method would provide a concise specification to generate tabular da
 
 Copulas are a model for specifying
 the joint probability p(x1, x2, ..., xn) given a correlation structure along
-with specifications for the marginal distribution of each feature. The current implementation uses a multivariate normal distribution with specified covariance matrix.  Future work can expand this choice to other multivariate distributions.
+with specifications for the marginal distribution of each feature. The current implementation uses a multivariate normal distribution with specified covariance matrix.  Future work can expand this choice to other multivariate distributions. 
 
 <<<<<<< HEAD
 =======
@@ -24,6 +24,7 @@ Inputs:
 - [ ] nuisance variables - carry no signal, set the lower limit on 'acceptable' feature importance
 - [ ] redundant (correlated and dependent - say by a linear combo of informative features)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 - [ ] separation between classes (can we filter +/- k% on either side of p_thresh to create separation?)
 - [ ] overlap - since we have ground truth probabilities, we could sample from a binomial distribution with probability of (py|x) to determine labels - this would work in conjuction with sig_k which controls the steepness of the sigmoid  
@@ -50,6 +51,9 @@ Output:
 =======
 ### Parameters
 >>>>>>> 411e66f (whitespace hook added)
+=======
+### Parameters  
+>>>>>>> a230a51 (Revert "whitespace hook added")
 | name          | type       | default        | description                                                                                                                      |
 | ------------- | ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | n_samples     | int        | (default=100)  | The number of samples.                                                                                                           |
@@ -109,7 +113,7 @@ pre-commit run
 ```
 
 ### Referencing this library
-If you use this library in your work, please cite our paper:
+If you use this library in your work, please cite our paper:  
 ```
 @inproceedings{barr:2020,
   author    = {Brian Barr and Ke Xu and Claudio Silva and Enrico Bertini and Robert Reilly and  C. Bayan Bruss and Jason D. Wittenbach},
@@ -119,11 +123,11 @@ If you use this library in your work, please cite our paper:
   booktitle = {2020 ICML Workshop on Human Interpretability in Machine Learning (WHI 2020)},
   date = {2020-07-17},
   pages = {362-367},
-}
+}                             
 ```
 
 ### Notes
-If you have tabular data, and want to fit a copula from it, consider this python library:  [copulas](https://sdv-dev.github.io/Copulas/index.html)
+If you have tabular data, and want to fit a copula from it, consider this python library:  [copulas](https://sdv-dev.github.io/Copulas/index.html)  
 Quick [visual tutorial](https://twiecki.io/blog/2018/05/03/copulas/) of copulas and probability integral transform.
 
 To run the examples, you should run:
